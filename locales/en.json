@@ -1,0 +1,37 @@
+{
+	"home": {
+		"lead": {
+			"firstSentence": "Welcome to this page where you can test the Nodepop API.",
+			"secondSentence": "Change the parameters in the url and get new results"
+		},
+		"What_it_is": {
+			"title": "What it is?",
+			"description": "This is a website where you can test the Nodepop API. The database has been created with Mongodb and Mongoose. You can search for second-hand items and use different filters."
+		},
+		"How_can_I-use-it": {
+			"title": "How can I use it?",
+			"description": "At the start of the website, the complete list of articles is obtained. You can manage the filters and the sorting in the URL."
+		},
+		"list_all_items": " LIST ALL ITEMS : by default they are arranged alphabetically by name.",
+		"search_by_name": " SEARCH BY NAME: name must be alphanumeric",
+		"filter_by_tag": "FILTER BY TAG: Must be one of the following strings: 'work', 'lifestyle', 'motor' or 'mobile'.",
+		"sort": "SORT : by name or price.",
+		"list_by_price": "LIST BY PRICE: price must be a number. There is a pattern for maximum and minimum price.",
+		"pagination": "PAGINATION",
+		"title_Items": "Items"
+	},
+	"Invalid credentials": "Invalid credentials",
+	"home.lead.firstSentence": "home.lead.firstSentence",
+	"home.lead.secondSentence": "home.lead.secondSentence",
+	"home.What_it_is.title": "home.What_it_is.title",
+	"home.What_it_is.description": "home.What_it_is.description",
+	"home.How_can_I-use-it.title": "home.How_can_I-use-it.title",
+	"home.How_can_I-use-it.description": "home.How_can_I-use-it.description",
+	"home.list_all_items": "home.list_all_items",
+	"home.search_by_name": "home.search_by_name",
+	"home.filter_by_tag": "home.filter_by_tag",
+	"home.sort": "home.sort",
+	"home.list_by_price": "home.list_by_price",
+	"home.pagination": "home.pagination",
+	"home.title_Items": "home.title_Items"
+}

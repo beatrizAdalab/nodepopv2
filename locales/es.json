@@ -1,0 +1,37 @@
+{
+	"home": {
+		"lead": {
+			"firstSentence": "Bienvenido a esta web donde pordrás testear la API Nodepop.",
+			"secondSentence": "Cambia los parámetros en la url y obtén nuevos resultados"
+		},
+		"What_it_is": {
+			"title": "¿Qué es?",
+			"description": "Esta es una website donde podrá testear la API de Nodepop. La base de datos ha sido creada con Mongodb y Mongoose. Puedes buscar artículos de segunda mano usando diferentes filtros"
+		},
+		"How_can_I-use-it": {
+			"title": "¿Cómo se utiliza?",
+			"description": "Al entrar en la web obtendrá la lista completa de los artículos. Usted puede manejar los flitros y la ordenación en la URL"
+		},
+		"list_all_items": " LISTADO DE TODOS LOS ARTÍCULOS : Por defecto ellos son ordenados alfabéticamente por el nombre.",
+		"search_by_name": "BUSCAR POR NOMBRE: Debe ser alfanumérico.",
+		"filter_by_tag": "FILTRADO POR TAGS: Debe ser uno de los cuatro strings siguientes: 'work', 'lifestyle', 'motor' or 'mobile'.",
+		"sort": "ORDEN : por nombre o precio.",
+		"list_by_price": "LISTADO POR PRECIO: el precio debe ser un número. Existe un patrón para precios máximos y mínimos.",
+		"pagination": "PAGINACIÓN",
+		"title_Items": "Artículos"
+	},
+	"Invalid credentials": "Invalid credentials",
+	"home.lead.firstSentence": "home.lead.firstSentence",
+	"home.lead.secondSentence": "home.lead.secondSentence",
+	"home.What_it_is.title": "home.What_it_is.title",
+	"home.What_it_is.description": "home.What_it_is.description",
+	"home.How_can_I-use-it.title": "home.How_can_I-use-it.title",
+	"home.How_can_I-use-it.description": "home.How_can_I-use-it.description",
+	"home.list_all_items": "home.list_all_items",
+	"home.search_by_name": "home.search_by_name",
+	"home.filter_by_tag": "home.filter_by_tag",
+	"home.sort": "home.sort",
+	"home.list_by_price": "home.list_by_price",
+	"home.pagination": "home.pagination",
+	"home.title_Items": "home.title_Items"
+}
