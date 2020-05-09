@@ -2,17 +2,17 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/:locale', (req, res, next) => {
-  // recuperar el locale que nos pasan
+  // collect the chosen locale
   const locale = req.params.locale;
 
-  // guardar la página de la que viene para poder volver
-  const volverA = req.get('referer');
+  // save the previous page to return
+  const backTo = req.get('referer');
 
-  // establecemos cookie del nuevo idioma
-  res.cookie('nodepopv2-locale', locale, { maxAge: 1000 * 60 * 60 * 24 * 20 }); // maxAge va en ms
+  //we set a new language cookie
+  res.cookie('nodepopv2-locale', locale, { maxAge: 1000 * 60 * 60 * 24 * 20 }); // maxAge in ms
 
-  // redireccionamos a la página de la que venía
-  res.redirect(volverA);
+  // we redirect to the source page
+  res.redirect(backTo);
 });
 
 module.exports = router;

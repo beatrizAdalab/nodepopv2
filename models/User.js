@@ -2,7 +2,6 @@
 
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-//const nodemailer = require('nodemailer');
 
 const userSchema = mongoose.Schema({
   email: {

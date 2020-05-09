@@ -2,7 +2,9 @@
 
 const Item = require("../../models/Item");
 const upload = require('../../lib/configMulter');
+const path = require('path');
 const { validationResult } = require("express-validator");
+
 
 const itemCtrl = {};
 
@@ -23,23 +25,17 @@ itemCtrl.GetItems = async (req, res, next) => {
   }
 };
 
-itemCtrl.createItem = (req, res, next) => {
-  const name = req.body.name
-  res.send(console.log(name, 'sksksk'))
-}
-
-/* itemCtrl.createItem = async (req, res, next) => {
-  console.log(req.body)
+itemCtrl.createItem = async (req, res, next) => {
   try {
 
     //validation
     validationResult(req).throw();
 
     //new item
-    const newItem = (req.body);
-    const item = new Item(newItem);
+    const newItem = req.body;
 
-    //console.log(req.file, 'file')
+    const item = new Item(newItem);
+    await item.setFile(req.file) // save photo
 
     //save item
     const itemSaved = await item.save();
@@ -52,7 +48,7 @@ itemCtrl.createItem = (req, res, next) => {
   } catch (err) {
     next(err);
   }
-}; */
+};
 
 itemCtrl.GetTags = async (req, res, next) => {
   try {

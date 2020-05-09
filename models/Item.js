@@ -4,6 +4,11 @@ const mongoose = require("mongoose");
 const fs = require("fs");
 const path = require("path");
 const Schema = mongoose.Schema;
+const cote = require('cote')
+
+const thumbnailRequester = new cote.Requester({
+  name: 'thumbnail creator requester'
+});
 
 const itemSchema = Schema({
   name: {
@@ -58,11 +63,17 @@ itemSchema.statics.allowedTags = function () {
 };
 
 /**  save Photo Items*/
-itemSchema.statics.savePhoto = async function (photoObject) {
-  if (!photoObject) return
-  const pathPhotos = path.join(__dirname, '../public/images/items', photoObject.originalname)
-  await fs.copy(photoObject.path, pathPhotos)
-  this.photo = photoObject.originalname
+itemSchema.methods.setFile = async function (imageObject) {
+  if (!imageObject) return
+  console.log(imageObject)
+
+  const pathPhoto = path.join('/images/items', imageObject.originalname)
+  this.photo = pathPhoto
+
+  thumbnailRequester.send({
+    type: 'createThumbnail',
+    image: pathPhoto
+  })
 }
 
 /** find items */

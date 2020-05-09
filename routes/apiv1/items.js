@@ -4,8 +4,11 @@ const express = require("express");
 const router = express.Router();
 const { query, body } = require("express-validator");
 const verifyToken = require('../../lib/verifyToken');
+const upload = require('../../lib/configMulter');
+
 
 const itemCtrl = require("../../controllers/apiv1_controller/item_controller");
+
 
 //GET apiv1/tags => list of tags
 router.get("/", itemCtrl.IndexApi);
@@ -49,11 +52,10 @@ router.get("/items", verifyToken, [
 
 
 //POST apiv1/items => create item
-router.post("/items", verifyToken, [
+router.post("/items", upload.single('photo'), verifyToken, [
   body("name").exists().notEmpty().withMessage("Name is mandatory"),
   body("price").exists().notEmpty().isNumeric().withMessage("Price must be a number and is mandatory"),
   body("buy").exists().isBoolean().withMessage("Buy must be boolean and is mandatory"),
-  body("photo").exists().withMessage("Photo is mandatory"),
 ], itemCtrl.createItem);
 
 
