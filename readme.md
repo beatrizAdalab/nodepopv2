@@ -46,6 +46,24 @@ $ npm run dev // Production mode
 
 ## API Nodepop
 
+### Authentication
+To access the API you will need an authentication token. For this you must access:
+```bash
+http://localhost:3000/apiv1/authenticate
+```
+Here you must send a JSON in the body with the following information:
+
+```bash
+{
+    "email": "user@example.com​",
+    "password": "1234"
+}
+```
+
+Now you will receive a token. 
+You should include it in the requests to the API. In the header with the value "x-access-token", in the body or in the url queries, both with the token value.
+
+
 ### Url base
 The Base URL is the root URL for all of the API. If you encounter a 404 error, check the path.
 
@@ -90,6 +108,10 @@ Create a new Item | POST
 json| ![createItem](./public/images/createItem.png)
 response| ![create Item response](./public/images/responseCreate.png)
 
+### microservices
+Since the last update, each time you create a new item you will be able to upload a photograph of your premises and a Thumbnail will be created in a microservice dedicated to this task.
+
+Images will be available in public / images / items
 
 ## Web Nodepop
 On this website (http://localhost:3000), through your url, you can try the following:
@@ -97,6 +119,9 @@ On this website (http://localhost:3000), through your url, you can try the follo
 * The list of all items
 * sort, filtered by tag and price
 * pagination
+
+### Internationalization.
+Since the last update, the English and Spanish languages are available.
 
 ![page web Nodemon](./public/images/webNodepop.png)
 
