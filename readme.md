@@ -11,6 +11,10 @@ Also included is a web page to show and filter the items.
 
 It is the first version and has been created within the Keepcoding Full Stack Web course.
 
+## Test hosting
+The application is temporarily hosted at [ec2-3-128-13-250.us-east-2.compute.amazonaws.com](http://ec2-3-128-13-250.us-east-2.compute.amazonaws.com) 
+
+
 
 ## Prerequisites 📋
 Before starting we must install several libraries:
